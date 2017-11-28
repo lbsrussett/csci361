@@ -32,8 +32,9 @@ int main(void)
 	// ******************************************
 	// This code will call part 3. You may choose to add parameters,
 	// depending on the nature of your project
-	char*hworld = part_three();
-    long long int returned_part3 = part_three();
+	//char*hworld = part_three();
+	long long int hw[11];
+    long long int  *returned_part3 = (long long int*) part_three(hw);
     printf("Result of part_three is %ld\n", returned_part3);
  //   ******************************************
 
