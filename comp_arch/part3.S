@@ -6,11 +6,10 @@ part_three:
 	//11 chars long + 0 for end byte, 12*8 = 96
 
 	//PUT 72, "H", IN REG X0 WHICH IS BASE OF ARRAY
-	ADD X2, XZR, XZR
-	ADD X1, X2, #72 //X1 = 72 + 0
+	//ADD X2, XZR, XZR
+	ADD X1, XZR, #72 //X1 = 72 + 0
 	STUR X1,[X0,#0] //STORE "H" IN FIRST POSITION OF X0
-	// FROM THE BOOK: "Store byte "STUR" takes a byte from the rightmost 8 bits of a register and writes it to memory.
-	//NOTE THAT WE DO NOT NEED TO MULTIPLY THE OFFSET BY 8 AS THIS IS AN ARRAY OF BYTES
+	
 
 	//PUT "e" IN ARRAY BY MULTIPLYING 1.1*100 TO GET 101
 	//LEARNING GOAL: PRACTICE WITH FLOATING POINT OPERATIONS
