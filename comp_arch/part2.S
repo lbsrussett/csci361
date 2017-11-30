@@ -21,17 +21,16 @@ binary_search:
 
 lowerloop:
 	CMP X20, X23
-	//MOV X30, #13451
-	MOV X29, #1
-	MVN X29, X29 // MVN is a "not" logic instructions. Puts -1 in x30.
-	MOV X0, X29
+	MOV X19, #1
+	MVN X19, X19 // MVN is a "not" logic instructions. Puts -1 in x29.
+	MOV X0, X19
 	B.EQ exit
 	ADD X24, X20, X23
 	SUB X24, X24, #1
 	LSR X23, X24, #1
 	CMP X2, X23
-	MOV X29, X23
-	MOV X0, X29
+	MOV X19, X23
+	MOV X0, X19
 	B.EQ exit
 	B.GT upperloop
 	B.LT lowerloop
@@ -39,17 +38,16 @@ lowerloop:
 
 upperloop:
 	CMP X22, X23
-	//MOV X30, #13456
-	MOV X29, #1
-	MVN X29, X29
-	MOV X0, X29
+	MOV X19, #1
+	MVN X19, X19
+	MOV X0, X19
 	B.EQ exit
 	ADD X26, X23, X22
 	ADD X26, X26, #1
 	LSR X23, X26, #1
 	CMP X2, X23
-	MOV X29, X23
-	MOV X0, X29
+	MOV X19, X23
+	MOV X0, X19
 	B.EQ exit
 	B.GT upperloop
 	B.LT lowerloop
